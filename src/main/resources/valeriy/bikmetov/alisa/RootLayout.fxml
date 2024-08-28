@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" stylesheets="@yellowOnBlack.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="valeriy.bikmetov.alisa.view.RootLayoutController">
+   <top>
+       <VBox prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+           <MenuBar>
+               <Menu mnemonicParsing="false" text="Файл">
+                   <MenuItem fx:id="mnuAddBook" mnemonicParsing="false" text="Добавить книгу" />
+                   <MenuItem fx:id="mnuAddBookNoCopy" mnemonicParsing="false" text="Добавить книгу без копирования" />
+                   <MenuItem fx:id="mnuAddBooks" mnemonicParsing="false" text="Добавить книги из каталога" />
+                   <MenuItem fx:id="mnuAddBooksNoCopy" mnemonicParsing="false" text="Сканировать каталог" />
+                   <MenuItem fx:id="mnuClose" mnemonicParsing="false" text="Выход" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Изменить">
+                   <MenuItem mnemonicParsing="false" text="Delete" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Библиотека">
+                   <MenuItem mnemonicParsing="false" text="Библиотека" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Справка">
+                   <MenuItem mnemonicParsing="false" text="About" />
+               </Menu>
+           </MenuBar>
+           <ToolBar prefHeight="40.0" prefWidth="200.0">
+               <VBox.margin>
+                   <Insets />
+               </VBox.margin>
+               <Label text="Библиотеки" />
+               <ComboBox fx:id="libraries" onAction="#changeItem" prefWidth="250.0">
+                   <padding>
+                       <Insets right="10.0" />
+                   </padding>
+               </ComboBox>
+               <Label text="Найти книгу">
+                   <padding>
+                       <Insets left="10.0" />
+                   </padding>
+               </Label>
+               <TextField fx:id="findBook" prefHeight="26.0" prefWidth="367.0" />
+           </ToolBar>
+       </VBox>
+   </top>
+</BorderPane>
